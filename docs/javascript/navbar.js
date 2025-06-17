@@ -22,7 +22,7 @@ navbar.innerHTML = `
                     </ul>
                 </div>
             </div>
-            <i id="mobileMenuBtn" class="fa-solid text-zinc-800 fa-bars lg:!hidden text-2xl cursor-pointer mr-2"></i>
+            <i data-aos="fade-left" id="mobileMenuBtn" class="fa-solid text-zinc-800 fa-bars lg:!hidden text-2xl cursor-pointer mr-2"></i>
         </div>
     </nav>
 
