@@ -24,47 +24,13 @@
 
 <body class="">
 
-    <div id="bottomToTopScroll"></div>
-    <nav class="fixed top-0 left-0 w-full bg-white z-40">
-        <div class="max-w-7xl mx-auto flex justify-between items-center w-full lg:p-5 p-3 lg:h-24 h-20">
-            <a data-aos="fade-right" href="/index.html" class="flex items-center justify-center lg:justify-start">
-                <img src="/docs/assets/images/logo.png" class="lg:h-20 h-16" alt="logo">
-            </a>
-            <div class="flex items-center gap-10">
-                <div class="lg:flex items-center gap-10 hidden">
-                    <ul id="navbarLinks" data-aos="fade-left" class="lg:flex hidden items-center text-zinc-800 gap-10">
-                        <li><a href="/index.html"
-                                class="hover:text-[#95a694] tracking-wide  transition-all duration-500">Home</a></li>
-                        <li><a href="/services.html"
-                                class="hover:text-[#95a694] tracking-wide transition-all duration-500">Services</a></li>
-                        <li><a href="/contact.html"
-                                class="hover:text-[#95a694] tracking-wide transition-all duration-500">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <i id="mobileMenuBtn" class="fa-solid text-zinc-800 fa-bars lg:!hidden text-2xl cursor-pointer mr-2"></i>
-        </div>
-    </nav>
-
-    <div id="mobileMenu"
-        class="fixed left-0 top-0 bg-white w-0 overflow-hidden h-screen z-50 transition-all duration-500">
-        <div class="flex items-end justify-end p-5">
-            <i class="fa-solid mobileMenuCloseBtn fa-x z-50 text-zinc-800 text-xl cursor-pointer"></i>
-        </div>
-        <div class="p-6">
-            <ul class="flex relative z-50 text-zinc-800 flex-col gap-7">
-                <li><a href="/index.html"
-                        class="hover:text-[#95a694] tracking-wide  transition-all duration-500">Home</a></li>
-                <li><a href="/services.html"
-                        class="hover:text-[#95a694] tracking-wide transition-all duration-500">Services</a></li>
-                <li><a href="/contact.html"
-                        class="hover:text-[#95a694] tracking-wide transition-all duration-500">Contact Us</a>
-                </li>
-            </ul>
-        </div>
+    <div id="global-loader"
+        class="hidden transition-opacity duration-300 opacity-0 fixed inset-0 bg-zinc-100 flex justify-center items-center z-50">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#2d4d55]"></div>
     </div>
-    <div class="lg:h-24 h-20"></div>
+
+    <div id="bottomToTopScroll"></div>
+    <div id="navbar"></div>
 
     <section class="homeBanner md:min-h-[calc(100vh-6rem)] min-h-[calc(100vh-5rem)] bg-center bg-cover">
         <div
@@ -98,7 +64,8 @@
             <p data-aos="fade-up" class="text-zinc-500 mt-6 ">
                 With GREENCYCLES, your junk removal cost is directly tied to the volume of items you need removed -
                 that is, the amount of space they take up in our truck. Whether you're undertaking a small seasonal
-                purge of a few bulky items, to a basement of unwanted junk and furniture. Our teams will price your load
+                purge of a few bulky items, to a basement of unwanted junk and furniture. Our teams will price your
+                load
                 size to match one of our price tiers below. Pricing is made simple, just for you.
             </p>
             <div data-aos="fade-up" class="flex mt-5">
@@ -218,6 +185,13 @@
             </div>
         </div>
 
+        <div class="flex items-center justify-center md:mt-16 mt-8">
+            <a href="/services.html" data-aos="fade-up" data-aos-delay="300"
+                class="w-full md:w-auto inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-[#2d4d55] shadow-xs hover:opacity-80 transition-all duration-500">
+                View All Services
+            </a>
+        </div>
+
     </section>
 
     <section class="max-w-7xl md:mt-26 mt-10 w-full mx-auto px-5">
@@ -249,7 +223,8 @@
 
     <section class="bg-white md:mt-32 mt-10 px-4" id="pricing">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 data-aos="fade-up" class="text-center md:text-5xl text-3xl mt-3 font-semibold text-zinc-700">Transparent
+            <h2 data-aos="fade-up" class="text-center md:text-5xl text-3xl mt-3 font-semibold text-zinc-700">
+                Transparent
                 Pricing</h2>
             <p data-aos-delay="100" data-aos="fade-up" class="text-gray-600 mt-4 ">Simple, upfront pricing with no
                 surprises. Choose the load size that fits
@@ -306,7 +281,8 @@
                 Schedule Your Service
             </h2>
             <p data-aos="fade-up" class="text-zinc-300 max-w-2xl mx-auto text-center text-lg my-5">
-                We are here to help you with all your needs. Please fill out the form below to schedule your service.
+                We are here to help you with all your needs. Please fill out the form below to schedule your
+                service.
             </p>
             <div class="flex items-center justify-center">
                 <a href="/contact.html" data-aos="fade-up"
@@ -331,7 +307,8 @@
                 </button>
                 <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <p class="pt-3 text-zinc-600">
-                        We haul away furniture, appliances, electronics, yard waste, construction debris, and more. If
+                        We haul away furniture, appliances, electronics, yard waste, construction debris, and more.
+                        If
                         it’s non-hazardous and two people can lift it — we’ll take it!
                     </p>
                 </div>
@@ -343,7 +320,8 @@
                 </button>
                 <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <p class="pt-3 text-zinc-600">
-                        We offer transparent pricing based on the volume your items take up in our dump trailer. We also
+                        We offer transparent pricing based on the volume your items take up in our dump trailer. We
+                        also
                         have flat rates for specific items. Visit our Pricing page for details.
                     </p>
                 </div>
@@ -356,7 +334,8 @@
                 </button>
                 <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <p class="pt-3 text-zinc-600">
-                        Not always. As long as we have access to the items and clear instructions, we can remove your
+                        Not always. As long as we have access to the items and clear instructions, we can remove
+                        your
                         junk contact-free. Just send us photos beforehand.
 
 
@@ -386,7 +365,8 @@
                 </button>
                 <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <p class="pt-3 text-zinc-600">
-                        We serve New York, New Jersey, Connecticut, and Pennsylvania. Not sure if you're in range? Just
+                        We serve New York, New Jersey, Connecticut, and Pennsylvania. Not sure if you're in range?
+                        Just
                         give us a quick call or text!
 
 
@@ -402,7 +382,8 @@
                 </button>
                 <div id="content-6" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <p class="pt-3 text-zinc-600">
-                        It’s easy — you can call, text, or fill out our booking form. We’ll confirm your appointment and
+                        It’s easy — you can call, text, or fill out our booking form. We’ll confirm your appointment
+                        and
                         give you a 2-hour window
                     </p>
                 </div>
@@ -414,7 +395,8 @@
                 </button>
                 <div id="content-7" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                     <p class="pt-3 text-zinc-600">
-                        No problem! We offer micro pickups for single items like sofas, mattresses, or TVs at affordable
+                        No problem! We offer micro pickups for single items like sofas, mattresses, or TVs at
+                        affordable
                         flat rates.
                     </p>
                 </div>
