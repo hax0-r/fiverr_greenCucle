@@ -46,6 +46,7 @@ input:user-invalid {
 
 .banner {
     background: linear-gradient(rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.466)), url(/docs/assets/images/banner.jpg) center/cover no-repeat;
+    background-attachment: fixed;
 }
 
 .glass {
