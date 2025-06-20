@@ -77,7 +77,9 @@
     </section>
 
     <section class="max-w-7xl mx-auto md:mt-20 mt-10 p-5">
-        <form data-aos="fade-up" action="" class="grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-5 md:gap-y-14">
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" data-aos="fade-up"
+            class="grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-5 md:gap-y-14">
+            <input type="hidden" name="access_key" value="551d73fd-4169-4c26-9fc5-27fc68ed8254">
             <input required name="name" type="text" class="w-full py-3 border-b-2 border-zinc-300"
                 placeholder="Enter Name">
             <input required name="email" type="email" class="w-full py-3 border-b-2 border-zinc-300"
@@ -88,8 +90,14 @@
                 placeholder="Enter your Address">
             <textarea required name="Message" class="w-full md:col-span-2 py-3 border-b-2 border-zinc-300"
                 placeholder="How Can We Help" rows="6"></textarea>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <button
                 class="bg-[#2d4d55] w-full text-center rounded-lg transition-all duration-500 hover:opacity-80 cursor-pointer text-white md:col-span-2 p-3.5">Submit</button>
+            <div id="success-message"
+                class="bg-green-50 p-4 rounded-lg text-green-600 text-center hidden md:col-span-2">
+                ✅ Thank you! Your submission has been received.
+            </div>
+
         </form>
     </section>
 
@@ -109,6 +117,37 @@
     <script src="./docs/javascript/global.js"></script>
     <script src="./docs/javascript/navbar.js"></script>
     <script src="./docs/javascript/footer.js"></script>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Show success message
+                    document.getElementById('success-message').classList.remove('hidden');
+
+                    // Optionally clear the form
+                    form.reset();
+                } else {
+                    alert('Something went wrong. Please try again.');
+                }
+            } catch (error) {
+                console.error('Submission failed', error);
+                alert('There was an error. Please try again later.');
+            }
+        });
+    </script>
 
 </body>
 
