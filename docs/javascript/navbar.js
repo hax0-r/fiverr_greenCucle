@@ -15,6 +15,9 @@ navbar.innerHTML = `
                         <li><a href="/services.html"
                                 class="hover:text-[#95a694] tracking-wide transition-all duration-500">Services</a>
                         </li>
+                        <li><a href="/pricing.html"
+                                class="hover:text-[#95a694] tracking-wide transition-all duration-500">Pricing</a>
+                        </li>
                         <li><a href="/contact.html"
                                 class="hover:text-[#95a694] tracking-wide transition-all duration-500">Contact
                                 Us</a>
@@ -37,6 +40,8 @@ navbar.innerHTML = `
                         class="hover:text-[#95a694] tracking-wide  transition-all duration-500">Home</a></li>
                 <li><a href="/services.html"
                         class="hover:text-[#95a694] tracking-wide transition-all duration-500">Services</a></li>
+                <li><a href="/pricing.html"
+                        class="hover:text-[#95a694] tracking-wide transition-all duration-500">Pricing</a></li>
                 <li><a href="/contact.html"
                         class="hover:text-[#95a694] tracking-wide transition-all duration-500">Contact Us</a>
                 </li>
